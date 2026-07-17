@@ -1,0 +1,1 @@
+var netmera;importScripts("https://ntm.netmera-web.com/wsdk2/netmera_sw.js"),netmera={};

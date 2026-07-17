@@ -1,0 +1,88 @@
+<!doctype html><html><head><meta charset="UTF-8"><style>.notification-wrapper {
+            height: 120px;
+            background-color: #fafafa;
+            padding: 20px;
+            position: relative;
+            display: none;
+            -webkit-box-shadow: 0px 1px 11px 0px #8f8c8c;
+            box-shadow: 0px 1px 11px 0px #8f8c8c;
+            border-radius: 10px;
+            margin: 3px 10px;
+        }
+
+        .notification-logo {
+            float: left;
+            margin: 13px 15px 0px 0px;
+        }
+
+        .notification-logo img {
+            width: 65px;
+            height: 65px;
+            border-radius: 5px;
+        }
+
+        .notification-title {
+            margin-bottom: 5px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.5em;
+            color: #000;
+            overflow: hidden;
+        }
+
+        .notification-info {
+            line-height: 1.0em;
+            margin: 10px 0;
+            padding: 0;
+            text-align: left;
+            overflow: hidden;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-size: 14px;
+            display: -webkit-box;
+            max-width: 100%;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
+        .notification-text-wrapper {
+            position: relative;
+            padding: 10px 0 0 0;
+            color: #000;
+            text-align: left;
+            margin: 0;
+            line-height: 1.4em;
+        }
+
+        .btn-notification {
+            background-color: #37AF2E;
+            float: left;
+            color: #fff;
+            margin: 0px 5px;
+            cursor: pointer;
+            min-width: 100px;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            border-radius: 5px;
+        }
+
+        .btn-notification:hover {
+            background-color: #127B0A;
+        }
+
+        .btn-secondary:hover {
+            background-color: #666;
+        }
+
+        .notification-buttons {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .btn-secondary {
+            background-color: #999;
+        }</style><script>var nmfbx;(()=>{"use strict";var e={d:(t,n)=>{for(var o in n)e.o(n,o)&&!e.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:n[o]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};function n(){const e=new URL("https://ntm.netmera-web.com/wsdk2"),t=function(){const e={},t=/^[a-zA-Z0-9\-_:/?#\@!$&'*+,;=.]+$/;return location.hash.substr(1).split("&").forEach((function(n){const o=n.split("=");if(2===o.length){const n=decodeURIComponent(o[0]),r=decodeURIComponent(o[1]);t.test(n)&&t.test(r)?e[n]=r:console.warn("Invalid Key or Value:",n,r)}else console.warn("Invalid parameter format:",n)})),e}(),n=new URL(t.wSrc);if(function(e,t){return"https:"===t.protocol&&(e.host===t.host||t.host.endsWith(".netmera-web.com"))}(e,n)){const e=document.createElement("script");e.type="text/javascript",e.async=!0;try{window.parent&&window.parent.netmera&&window.parent.netmera.nonce&&e.setAttribute("nonce",window.parent.netmera.nonce)}catch(e){}e.src=t.wSrc,e.onload=function(){nmWorker.init(t)},document.getElementsByTagName("head")[0].appendChild(e)}else console.error("Netmara::js domain mismatch! sdkArtifactHost="+e.host+", targetJsHost="+n.host)}e.r(t),e.d(t,{init:()=>n}),nmfbx=t})();</script></head><body onload="nmfbx.init()"><div class="notification-wrapper" id="notification-dlg"><div class="notification-logo" id="notification-logo"></div><div class="notification-text-wrapper"><div class="notification-title" id="notification-title">We would like to send you push notifications.</div><div class="notification-info" id="notification-info">Learn Innovations and Campaigns Instantly, Do not Miss Opportunities!</div></div><div style="clear: both;"><div class="notification-buttons"><div class="btn-notification btn-secondary" id="btn-later" onclick="nmWorker.onAskLaterClicked();">Ask Later</div><div class="btn-notification" id="btn-allow" onclick="nmWorker.onContinueOptinClicked();">Continue</div></div><div style="clear: both;"></div></div></div></body></html>

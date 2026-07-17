@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<script>var netmera = netmera || []</script>
+<script src="https://cdn.netmera-web.com/wsdkjs/NMS.Arf0hz_GTVg2I__ePbj94Er4bk5zy2dkr9dDCc062OvJK9cNdZxlSFlTQwM7rTzOtWLWXREY1toMHK8B" async></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.funds.title">Yatırım Fonları | N Bank</title>
+<meta name="description" data-i18n-content="meta.funds.desc" content="N Bank Altın Fonu, Hisse Senedi Fonu ve Değişken Fon detaylarını inceleyin.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="N Bank logo">N Bank</a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+      <a href="kredi-hesaplama.html" data-i18n="nav.loans">Krediler</a>
+      <a href="kredi-karti-basvuru.html" data-i18n="nav.cards">Kredi Kartları</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline"><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
+      <a href="signup.html" class="btn btn-primary"><span data-i18n="header.signup">Hesap Aç</span></a>
+      <div class="lang-switch" data-lang-switch>
+        <button type="button" class="active" data-lang="tr">TR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Menüyü aç" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Anasayfa</a> / <span data-i18n="breadcrumb.funds">Yatırım Fonları</span></div>
+    <h1 data-i18n="funds.pageTitle">Yatırım Fonları</h1>
+    <p data-i18n="funds.pageDesc">Risk profilinize uygun fonu seçin, birikimlerinizi N Bank güvencesiyle değerlendirin.</p>
+  </div>
+</section>
+
+<section class="section" id="altin">
+  <div class="container">
+    <div class="grid grid-3">
+
+      <div class="card fund-card">
+        <span class="fund-badge" data-i18n="fund.risk.low">Düşük Risk</span>
+        <h3 data-i18n="fund.gold.title">N Bank Altın Fonu</h3>
+        <p data-i18n="fund.gold.desc.full">Gram altın, altına dayalı kira sertifikaları ve kıymetli maden hesaplarından oluşan portföyüyle enflasyona karşı koruma sağlar.</p>
+        <div class="fund-return"><span class="value" data-i18n="fund.gold.returnValue">%18,4</span><span class="period" data-i18n="fund.returnPeriod">son 12 ay getiri</span></div>
+        <div class="fund-meta"><span data-i18n="fund.gold.fee">Yönetim Ücreti %1,20</span><span data-i18n="fund.gold.code">Fon Kodu NBA</span></div>
+        <a href="signup.html?tip=yatirim" class="btn btn-ghost btn-block" style="margin-top:16px;" data-i18n="fund.investCta">Fona Yatırım Yap</a>
+      </div>
+
+      <div class="card fund-card">
+        <span class="fund-badge" data-i18n="fund.risk.high">Yüksek Risk</span>
+        <h3 data-i18n="fund.stock.title">N Bank Hisse Senedi Fonu</h3>
+        <p data-i18n="fund.stock.desc.full">BIST-100 endeksinde yer alan güçlü temelli şirketlere yatırım yaparak uzun vadede sermaye artışı hedefler.</p>
+        <div class="fund-return"><span class="value" data-i18n="fund.stock.returnValue">%27,6</span><span class="period" data-i18n="fund.returnPeriod">son 12 ay getiri</span></div>
+        <div class="fund-meta"><span data-i18n="fund.stock.fee">Yönetim Ücreti %1,80</span><span data-i18n="fund.stock.code">Fon Kodu NHS</span></div>
+        <a href="signup.html?tip=yatirim" class="btn btn-ghost btn-block" style="margin-top:16px;" data-i18n="fund.investCta">Fona Yatırım Yap</a>
+      </div>
+
+      <div class="card fund-card">
+        <span class="fund-badge" data-i18n="fund.risk.medium">Orta Risk</span>
+        <h3 data-i18n="fund.mixed.title">N Bank Değişken Fon</h3>
+        <p data-i18n="fund.mixed.desc.full">Hisse senedi, döviz, kira sertifikası ve sabit getirili menkul kıymetleri dengeli bir dağılımla bir araya getirir.</p>
+        <div class="fund-return"><span class="value" data-i18n="fund.mixed.returnValue">%21,9</span><span class="period" data-i18n="fund.returnPeriod">son 12 ay getiri</span></div>
+        <div class="fund-meta"><span data-i18n="fund.mixed.fee">Yönetim Ücreti %1,50</span><span data-i18n="fund.mixed.code">Fon Kodu NDF</span></div>
+        <a href="signup.html?tip=yatirim" class="btn btn-ghost btn-block" style="margin-top:16px;" data-i18n="fund.investCta">Fona Yatırım Yap</a>
+      </div>
+
+    </div>
+
+    <div class="section-head" style="margin-top:56px;">
+      <span class="eyebrow" data-i18n="funds.compareEyebrow">Karşılaştırma</span>
+      <h2 data-i18n="funds.compareTitle">Fon performansları</h2>
+      <p data-i18n="funds.compareDesc">Getiri oranları geçmiş performansı yansıtır, gelecekteki getiriler için garanti teşkil etmez.</p>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; background:var(--nb-white); border-radius:var(--nb-radius); overflow:hidden; box-shadow:var(--nb-shadow);">
+        <thead>
+          <tr style="background:var(--nb-primary-darker); color:#fff; text-align:left;">
+            <th style="padding:14px 18px; font-size:.85rem;" data-i18n="funds.table.fundName">Fon Adı</th>
+            <th style="padding:14px 18px; font-size:.85rem;" data-i18n="funds.table.riskLevel">Risk Seviyesi</th>
+            <th style="padding:14px 18px; font-size:.85rem;" data-i18n="funds.table.return">Son 12 Ay Getiri</th>
+            <th style="padding:14px 18px; font-size:.85rem;" data-i18n="funds.table.fee">Yönetim Ücreti</th>
+            <th style="padding:14px 18px; font-size:.85rem;" data-i18n="funds.table.code">Fon Kodu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-top:1px solid var(--nb-border);">
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.gold.title">N Bank Altın Fonu</td>
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.risk.lowWord">Düşük</td>
+            <td style="padding:14px 18px; font-size:.9rem; color:var(--nb-success); font-weight:700;" data-i18n="fund.gold.returnValue">%18,4</td>
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.gold.feeValue">%1,20</td>
+            <td style="padding:14px 18px; font-size:.9rem;">NBA</td>
+          </tr>
+          <tr style="border-top:1px solid var(--nb-border);">
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.stock.title">N Bank Hisse Senedi Fonu</td>
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.risk.highWord">Yüksek</td>
+            <td style="padding:14px 18px; font-size:.9rem; color:var(--nb-success); font-weight:700;" data-i18n="fund.stock.returnValue">%27,6</td>
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.stock.feeValue">%1,80</td>
+            <td style="padding:14px 18px; font-size:.9rem;">NHS</td>
+          </tr>
+          <tr style="border-top:1px solid var(--nb-border);">
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.mixed.title">N Bank Değişken Fon</td>
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.risk.mediumWord">Orta</td>
+            <td style="padding:14px 18px; font-size:.9rem; color:var(--nb-success); font-weight:700;" data-i18n="fund.mixed.returnValue">%21,9</td>
+            <td style="padding:14px 18px; font-size:.9rem;" data-i18n="fund.mixed.feeValue">%1,50</td>
+            <td style="padding:14px 18px; font-size:.9rem;">NDF</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.78rem; color:var(--nb-text-muted); margin-top:10px;" data-i18n="funds.tableNote">*Veriler örnek amaçlıdır ve yatırım tavsiyesi niteliği taşımaz.</p>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="container">
+    <div class="cta-banner">
+      <div>
+        <h3 data-i18n="funds.ctaTitle">Hangi fonun size uygun olduğundan emin değil misiniz?</h3>
+        <p data-i18n="funds.ctaDesc">Hesap açın, risk profilinize göre önerilen fonları görün.</p>
+      </div>
+      <a href="signup.html" class="btn btn-primary btn-lg"><span data-i18n="header.signup">Hesap Aç</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="N Bank logo">N Bank</a>
+        <p data-i18n="footer.brandDesc">N Bank, bireysel ve ticari müşterilerine dijital bankacılık, kredi ve yatırım çözümleri sunan bir fintech kuruluşudur.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.invest">Yatırım &amp; Finans</h4>
+        <ul>
+          <li><a href="index.html#kredi-hesaplama" data-i18n="footer.link.liveRates">Canlı Döviz</a></li>
+          <li><a href="yatirim-fonlari.html" data-i18n="footer.link.funds">Yatırım Fonları</a></li>
+          <li><a href="yatirim-fonlari.html#altin" data-i18n="footer.link.goldDeposit">Altın Mevduat</a></li>
+          <li><a href="yatirim-fonlari.html#altin" data-i18n="footer.link.gold">Altın</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.loans">Krediler</h4>
+        <ul>
+          <li><a href="kredi-hesaplama.html?tip=konut" data-i18n="footer.link.mortgage">Konut Kredisi</a></li>
+          <li><a href="kredi-hesaplama.html?tip=bireysel" data-i18n="footer.link.personal">İhtiyaç Kredisi</a></li>
+          <li><a href="kredi-hesaplama.html?tip=tasit" data-i18n="footer.link.vehicle">Taşıt Kredisi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.useful">Faydalı Sayfalar</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.link.investorRelations">Yatırımcı İlişkileri</a></li>
+          <li><a href="kredi-hesaplama.html" data-i18n="footer.link.loanCalc">Kredi Hesaplama</a></li>
+          <li><a href="index.html#kredi-hesaplama" data-i18n="footer.link.fxCalc">Döviz Hesaplama</a></li>
+          <li><a href="yatirim-fonlari.html" data-i18n="footer.link.depositCalc">Mevduat Hesaplama</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> <span data-i18n="footer.copyright">N Bank. Tüm hakları saklıdır.</span></span>
+      <div class="footer-bottom-links">
+        <a href="#" data-i18n="footer.privacy">Gizlilik Politikası</a>
+        <a href="#" data-i18n="footer.terms">Kullanım Koşulları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

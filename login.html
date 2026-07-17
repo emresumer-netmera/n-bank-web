@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<script>var netmera = netmera || []</script>
+<script src="https://cdn.netmera-web.com/wsdkjs/NMS.Arf0hz_GTVg2I__ePbj94Er4bk5zy2dkr9dDCc062OvJK9cNdZxlSFlTQwM7rTzOtWLWXREY1toMHK8B" async></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.login.title">Giriş Yap | N Bank</title>
+<meta name="description" data-i18n-content="meta.login.desc" content="N Bank internet şubesine giriş yapın.">
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="N Bank logo">N Bank</a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+      <a href="kredi-hesaplama.html" data-i18n="nav.loans">Krediler</a>
+      <a href="kredi-karti-basvuru.html" data-i18n="nav.cards">Kredi Kartları</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline active"><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
+      <a href="signup.html" class="btn btn-primary"><span data-i18n="header.signup">Hesap Aç</span></a>
+      <div class="lang-switch" data-lang-switch>
+        <button type="button" class="active" data-lang="tr">TR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Menüyü aç" data-i18n-aria-label="nav.toggleAria" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <form class="form-card" data-demo-form data-success-key="login.successMsg">
+      <h2 data-i18n="login.title">İnternet Şubesi Girişi</h2>
+      <p class="form-sub" data-i18n="login.subtitle">TC kimlik numaranız ve şifrenizle güvenli bir şekilde giriş yapın.</p>
+
+      <div class="form-group">
+        <label for="tckn" data-i18n="login.field.tcknOrCustomer">TC Kimlik No / Müşteri No</label>
+        <input type="text" id="tckn" inputmode="numeric" maxlength="11" placeholder="11 haneli TC kimlik no" data-i18n-placeholder="field.tckn.placeholder" required>
+      </div>
+      <div class="form-group">
+        <label for="password" data-i18n="login.field.password">Şifre</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="remember">
+        <label for="remember" style="margin:0; font-weight:400;" data-i18n="login.remember">Bu cihazda beni hatırla</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="login.submit">Giriş Yap</button>
+      <p class="form-foot"><a href="#" data-i18n="login.forgot">Şifremi unuttum</a></p>
+      <p class="form-foot"><span data-i18n="login.noAccount">Henüz hesabınız yok mu?</span> <a href="signup.html" data-i18n="login.noAccountLink">Hemen hesap açın</a></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="assets/img/logo.png" alt="N Bank logo">N Bank</a>
+        <p data-i18n="footer.brandDesc">N Bank, bireysel ve ticari müşterilerine dijital bankacılık, kredi ve yatırım çözümleri sunan bir fintech kuruluşudur.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.invest">Yatırım &amp; Finans</h4>
+        <ul>
+          <li><a href="index.html#kredi-hesaplama" data-i18n="footer.link.liveRates">Canlı Döviz</a></li>
+          <li><a href="yatirim-fonlari.html" data-i18n="footer.link.funds">Yatırım Fonları</a></li>
+          <li><a href="yatirim-fonlari.html#altin" data-i18n="footer.link.goldDeposit">Altın Mevduat</a></li>
+          <li><a href="yatirim-fonlari.html#altin" data-i18n="footer.link.gold">Altın</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.loans">Krediler</h4>
+        <ul>
+          <li><a href="kredi-hesaplama.html?tip=konut" data-i18n="footer.link.mortgage">Konut Kredisi</a></li>
+          <li><a href="kredi-hesaplama.html?tip=bireysel" data-i18n="footer.link.personal">İhtiyaç Kredisi</a></li>
+          <li><a href="kredi-hesaplama.html?tip=tasit" data-i18n="footer.link.vehicle">Taşıt Kredisi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col.useful">Faydalı Sayfalar</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.link.investorRelations">Yatırımcı İlişkileri</a></li>
+          <li><a href="kredi-hesaplama.html" data-i18n="footer.link.loanCalc">Kredi Hesaplama</a></li>
+          <li><a href="index.html#kredi-hesaplama" data-i18n="footer.link.fxCalc">Döviz Hesaplama</a></li>
+          <li><a href="yatirim-fonlari.html" data-i18n="footer.link.depositCalc">Mevduat Hesaplama</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> <span data-i18n="footer.copyright">N Bank. Tüm hakları saklıdır.</span></span>
+      <div class="footer-bottom-links">
+        <a href="#" data-i18n="footer.privacy">Gizlilik Politikası</a>
+        <a href="#" data-i18n="footer.terms">Kullanım Koşulları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
