@@ -148,7 +148,7 @@ window.NB_I18N = {
     "field.email": "E-posta",
     "field.email.placeholder": "ornek@eposta.com",
     "form.submitApplication": "Başvuruyu Gönder",
-    "form.genericSuccess": "İşleminiz alındı. (Demo ortam – herhangi bir veri iletilmemiştir.)",
+    "form.genericSuccess": "İşleminiz alındı.",
 
     /* Login page ------------------------------------------------------------ */
     "meta.login.title": "Giriş Yap | N Bank",
@@ -162,7 +162,7 @@ window.NB_I18N = {
     "login.forgot": "Şifremi unuttum",
     "login.noAccount": "Henüz hesabınız yok mu?",
     "login.noAccountLink": "Hemen hesap açın",
-    "login.successMsg": "Giriş bilgileriniz alındı. (Demo ortam – herhangi bir hesaba bağlanılmamıştır.)",
+    "login.successMsg": "Giriş bilgileriniz alındı.",
 
     /* Signup page ------------------------------------------------------------ */
     "meta.signup.title": "Hesap Aç | N Bank",
@@ -177,7 +177,7 @@ window.NB_I18N = {
     "signup.terms": "Üyelik sözleşmesini ve aydınlatma metnini okudum, kabul ediyorum.",
     "signup.haveAccount": "Zaten hesabınız var mı?",
     "signup.haveAccountLink": "Giriş yapın",
-    "signup.successMsg": "Başvurunuz alındı. Kimlik doğrulama adımı için örnek bir bildirim gönderildi. (Demo ortam – herhangi bir hesap oluşturulmamıştır.)",
+    "signup.successMsg": "Başvurunuz alındı. Kimlik doğrulama adımı için örnek bir bildirim gönderildi.",
 
     /* Kredi hesaplama page ---------------------------------------------------- */
     "meta.loanCalc.title": "Kredi Hesaplama | N Bank",
@@ -213,7 +213,7 @@ window.NB_I18N = {
     "cardApply.field.income": "Aylık Gelir (TL)",
     "cardApply.field.income.placeholder": "Örn. 45000",
     "cardApply.terms": "Kredi kartı üyelik sözleşmesini ve aydınlatma metnini okudum, kabul ediyorum.",
-    "cardApply.successMsg": "Kredi kartı başvurunuz alındı, değerlendirme sonucu size bildirilecektir. (Demo ortam – herhangi bir başvuru işlenmemiştir.)",
+    "cardApply.successMsg": "Kredi kartı başvurunuz alındı, değerlendirme sonucu size bildirilecektir.",
 
     /* Yatırım fonları page ------------------------------------------------------ */
     "meta.funds.title": "Yatırım Fonları | N Bank",
@@ -378,7 +378,7 @@ window.NB_I18N = {
     "field.email": "Email",
     "field.email.placeholder": "example@email.com",
     "form.submitApplication": "Submit Application",
-    "form.genericSuccess": "Your submission has been received. (Demo environment – no data was actually transmitted.)",
+    "form.genericSuccess": "Your submission has been received.",
 
     /* Login page ------------------------------------------------------------ */
     "meta.login.title": "Log In | N Bank",
@@ -392,7 +392,7 @@ window.NB_I18N = {
     "login.forgot": "Forgot my password",
     "login.noAccount": "Don't have an account yet?",
     "login.noAccountLink": "Open one now",
-    "login.successMsg": "Your login details have been received. (Demo environment – no account was actually accessed.)",
+    "login.successMsg": "Your login details have been received.",
 
     /* Signup page ------------------------------------------------------------ */
     "meta.signup.title": "Open Account | N Bank",
@@ -407,7 +407,7 @@ window.NB_I18N = {
     "signup.terms": "I have read and accept the membership agreement and privacy notice.",
     "signup.haveAccount": "Already have an account?",
     "signup.haveAccountLink": "Log in",
-    "signup.successMsg": "Your application has been received. A sample notification has been sent for the identity verification step. (Demo environment – no account was actually created.)",
+    "signup.successMsg": "Your application has been received. A sample notification has been sent for the identity verification step.",
 
     /* Kredi hesaplama page ---------------------------------------------------- */
     "meta.loanCalc.title": "Loan Calculator | N Bank",
@@ -443,7 +443,7 @@ window.NB_I18N = {
     "cardApply.field.income": "Monthly Income (TL)",
     "cardApply.field.income.placeholder": "e.g. 45000",
     "cardApply.terms": "I have read and accept the credit card membership agreement and privacy notice.",
-    "cardApply.successMsg": "Your credit card application has been received; you will be notified of the result. (Demo environment – no application was actually processed.)",
+    "cardApply.successMsg": "Your credit card application has been received; you will be notified of the result.",
 
     /* Yatırım fonları page ------------------------------------------------------ */
     "meta.funds.title": "Investment Funds | N Bank",
