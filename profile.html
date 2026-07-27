@@ -5,12 +5,12 @@
 <script>var netmera = netmera || []</script>
 <script src="https://cdn.netmera-web.com/wsdkjs/NMS.Arf0hz_GTVg2I__ePbj94Er4bk5zy2dkr9dDCc062OvJK9cNdZxlSFlTQwM7rTzOtWLWXREY1toMHK8B" async></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="meta.login.title">Giriş Yap | N Bank</title>
-<meta name="description" data-i18n-content="meta.login.desc" content="N Bank internet şubesine giriş yapın.">
+<title data-i18n="meta.profile.title">Profilim | N Bank</title>
+<meta name="description" data-i18n-content="meta.profile.desc" content="N Bank hesap profil bilgilerinizi güncelleyin.">
 <link rel="icon" href="assets/img/logo.png">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body data-requires-auth>
 
 <header class="site-header">
   <div class="container">
@@ -19,10 +19,10 @@
       <a href="index.html" data-i18n="nav.home">Anasayfa</a>
       <a href="kredi-hesaplama.html" data-i18n="nav.loans">Krediler</a>
       <a href="kredi-karti-basvuru.html" data-i18n="nav.cards">Kredi Kartları</a>
-      <a href="profile.html" data-profile-link style="display:none;" data-i18n="nav.profile">Profilim</a>
+      <a href="profile.html" class="active" data-profile-link style="display:none;" data-i18n="nav.profile">Profilim</a>
     </nav>
     <div class="header-actions">
-      <a href="login.html" class="btn btn-outline active" data-login-btn><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
+      <a href="login.html" class="btn btn-outline" data-login-btn><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
       <a href="signup.html" class="btn btn-primary" data-signup-btn><span data-i18n="header.signup">Hesap Aç</span></a>
       <a href="#" class="btn btn-outline" data-logout-btn style="display:none;"><span data-i18n="header.logout">Çıkış Yap</span></a>
       <div class="lang-switch" data-lang-switch>
@@ -34,27 +34,53 @@
   </div>
 </header>
 
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Anasayfa</a> / <span data-i18n="breadcrumb.profile">Profilim</span></div>
+    <h1 data-i18n="profile.pageTitle">Profilim</h1>
+    <p data-i18n="profile.pageDesc">Hesap bilgilerinizi güncel tutun.</p>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
-    <form class="form-card" data-demo-form data-success-key="login.successMsg" data-netmera-login>
-      <h2 data-i18n="login.title">İnternet Şubesi Girişi</h2>
-      <p class="form-sub" data-i18n="login.subtitle">TC kimlik numaranız ve şifrenizle güvenli bir şekilde giriş yapın.</p>
+    <form class="form-card" data-demo-form data-success-key="profile.successMsg" data-netmera-profile>
+      <h2 data-i18n="profile.pageTitle">Profilim</h2>
+      <p class="form-sub" data-i18n="profile.pageDesc">Hesap bilgilerinizi güncel tutun.</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pf-ad" data-i18n="field.firstName">Ad</label>
+          <input type="text" id="pf-ad" placeholder="Adınız" data-i18n-placeholder="field.firstName.placeholder">
+        </div>
+        <div class="form-group">
+          <label for="pf-soyad" data-i18n="field.lastName">Soyad</label>
+          <input type="text" id="pf-soyad" placeholder="Soyadınız" data-i18n-placeholder="field.lastName.placeholder">
+        </div>
+      </div>
 
       <div class="form-group">
-        <label for="tckn" data-i18n="login.field.tcknOrCustomer">TC Kimlik No / Müşteri No</label>
-        <input type="text" id="tckn" inputmode="numeric" maxlength="11" placeholder="11 haneli TC kimlik no" data-i18n-placeholder="field.tckn.placeholder" required>
+        <label for="pf-cinsiyet" data-i18n="profile.field.gender">Cinsiyet</label>
+        <select id="pf-cinsiyet">
+          <option value="" data-i18n="profile.option.selectGender">Seçiniz</option>
+          <option value="male" data-i18n="profile.option.male">Erkek</option>
+          <option value="female" data-i18n="profile.option.female">Kadın</option>
+          <option value="unspecified" data-i18n="profile.option.unspecified">Belirtmek istemiyorum</option>
+        </select>
       </div>
-      <div class="form-group">
-        <label for="password" data-i18n="login.field.password">Şifre</label>
-        <input type="password" id="password" placeholder="••••••••" required>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pf-eposta" data-i18n="field.email">E-posta</label>
+          <input type="email" id="pf-eposta" placeholder="ornek@eposta.com" data-i18n-placeholder="field.email.placeholder">
+        </div>
+        <div class="form-group">
+          <label for="pf-telefon" data-i18n="field.phone">Cep Telefonu</label>
+          <input type="tel" id="pf-telefon" placeholder="05xx xxx xx xx" data-i18n-placeholder="field.phone.placeholder">
+        </div>
       </div>
-      <div class="form-check">
-        <input type="checkbox" id="remember">
-        <label for="remember" style="margin:0; font-weight:400;" data-i18n="login.remember">Bu cihazda beni hatırla</label>
-      </div>
-      <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="login.submit">Giriş Yap</button>
-      <p class="form-foot"><a href="#" data-i18n="login.forgot">Şifremi unuttum</a></p>
-      <p class="form-foot"><span data-i18n="login.noAccount">Henüz hesabınız yok mu?</span> <a href="signup.html" data-i18n="login.noAccountLink">Hemen hesap açın</a></p>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="profile.submit">Kaydet</button>
     </form>
   </div>
 </section>

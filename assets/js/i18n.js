@@ -14,6 +14,9 @@ window.NB_I18N = {
     "header.loginLong": "Giriş Yap",
     "header.loginShort": "Giriş",
     "header.signup": "Hesap Aç",
+    "header.logout": "Çıkış Yap",
+    "header.logoutShort": "Çıkış",
+    "nav.profile": "Profilim",
 
     /* Homepage hero ------------------------------------------------------ */
     "meta.home.title": "N Bank | Dijital Bankacılık",
@@ -232,7 +235,21 @@ window.NB_I18N = {
     "funds.tableNote": "*Veriler örnek amaçlıdır ve yatırım tavsiyesi niteliği taşımaz.",
     "funds.ctaTitle": "Hangi fonun size uygun olduğundan emin değil misiniz?",
     "funds.ctaDesc": "Hesap açın, risk profilinize göre önerilen fonları görün.",
-    "funds.ctaButton": "Hesap Aç"
+    "funds.ctaButton": "Hesap Aç",
+
+    /* Profile page ------------------------------------------------------------ */
+    "meta.profile.title": "Profilim | N Bank",
+    "meta.profile.desc": "N Bank hesap profil bilgilerinizi güncelleyin.",
+    "breadcrumb.profile": "Profilim",
+    "profile.pageTitle": "Profilim",
+    "profile.pageDesc": "Hesap bilgilerinizi güncel tutun.",
+    "profile.field.gender": "Cinsiyet",
+    "profile.option.selectGender": "Seçiniz",
+    "profile.option.male": "Erkek",
+    "profile.option.female": "Kadın",
+    "profile.option.unspecified": "Belirtmek istemiyorum",
+    "profile.submit": "Kaydet",
+    "profile.successMsg": "Profil bilgileriniz güncellendi."
   },
 
   en: {
@@ -244,6 +261,9 @@ window.NB_I18N = {
     "header.loginLong": "Log In",
     "header.loginShort": "Log In",
     "header.signup": "Open Account",
+    "header.logout": "Log Out",
+    "header.logoutShort": "Log Out",
+    "nav.profile": "My Profile",
 
     /* Homepage hero ------------------------------------------------------ */
     "meta.home.title": "N Bank | Digital Banking",
@@ -462,6 +482,20 @@ window.NB_I18N = {
     "funds.tableNote": "*Data is for illustration purposes only and does not constitute investment advice.",
     "funds.ctaTitle": "Not sure which fund is right for you?",
     "funds.ctaDesc": "Open an account to see funds recommended for your risk profile.",
-    "funds.ctaButton": "Open an Account"
+    "funds.ctaButton": "Open an Account",
+
+    /* Profile page ------------------------------------------------------------ */
+    "meta.profile.title": "My Profile | N Bank",
+    "meta.profile.desc": "Update your N Bank account profile information.",
+    "breadcrumb.profile": "My Profile",
+    "profile.pageTitle": "My Profile",
+    "profile.pageDesc": "Keep your account information up to date.",
+    "profile.field.gender": "Gender",
+    "profile.option.selectGender": "Select",
+    "profile.option.male": "Male",
+    "profile.option.female": "Female",
+    "profile.option.unspecified": "Prefer not to say",
+    "profile.submit": "Save",
+    "profile.successMsg": "Your profile information has been updated."
   }
 };

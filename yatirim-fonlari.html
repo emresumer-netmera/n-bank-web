@@ -19,10 +19,12 @@
       <a href="index.html" data-i18n="nav.home">Anasayfa</a>
       <a href="kredi-hesaplama.html" data-i18n="nav.loans">Krediler</a>
       <a href="kredi-karti-basvuru.html" data-i18n="nav.cards">Kredi Kartları</a>
+      <a href="profile.html" data-profile-link style="display:none;" data-i18n="nav.profile">Profilim</a>
     </nav>
     <div class="header-actions">
-      <a href="login.html" class="btn btn-outline"><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
-      <a href="signup.html" class="btn btn-primary"><span data-i18n="header.signup">Hesap Aç</span></a>
+      <a href="login.html" class="btn btn-outline" data-login-btn><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
+      <a href="signup.html" class="btn btn-primary" data-signup-btn><span data-i18n="header.signup">Hesap Aç</span></a>
+      <a href="#" class="btn btn-outline" data-logout-btn style="display:none;"><span data-i18n="header.logout">Çıkış Yap</span></a>
       <div class="lang-switch" data-lang-switch>
         <button type="button" class="active" data-lang="tr">TR</button>
         <button type="button" data-lang="en">EN</button>
@@ -44,7 +46,7 @@
   <div class="container">
     <div class="grid grid-3">
 
-      <div class="card fund-card">
+      <div class="card fund-card" data-product-fund="NBA">
         <span class="fund-badge" data-i18n="fund.risk.low">Düşük Risk</span>
         <h3 data-i18n="fund.gold.title">N Bank Altın Fonu</h3>
         <p data-i18n="fund.gold.desc.full">Gram altın, altına dayalı kira sertifikaları ve kıymetli maden hesaplarından oluşan portföyüyle enflasyona karşı koruma sağlar.</p>
@@ -53,7 +55,7 @@
         <a href="signup.html?tip=yatirim" class="btn btn-ghost btn-block" style="margin-top:16px;" data-i18n="fund.investCta">Fona Yatırım Yap</a>
       </div>
 
-      <div class="card fund-card">
+      <div class="card fund-card" data-product-fund="NHS">
         <span class="fund-badge" data-i18n="fund.risk.high">Yüksek Risk</span>
         <h3 data-i18n="fund.stock.title">N Bank Hisse Senedi Fonu</h3>
         <p data-i18n="fund.stock.desc.full">BIST-100 endeksinde yer alan güçlü temelli şirketlere yatırım yaparak uzun vadede sermaye artışı hedefler.</p>
@@ -62,7 +64,7 @@
         <a href="signup.html?tip=yatirim" class="btn btn-ghost btn-block" style="margin-top:16px;" data-i18n="fund.investCta">Fona Yatırım Yap</a>
       </div>
 
-      <div class="card fund-card">
+      <div class="card fund-card" data-product-fund="NDF">
         <span class="fund-badge" data-i18n="fund.risk.medium">Orta Risk</span>
         <h3 data-i18n="fund.mixed.title">N Bank Değişken Fon</h3>
         <p data-i18n="fund.mixed.desc.full">Hisse senedi, döviz, kira sertifikası ve sabit getirili menkul kıymetleri dengeli bir dağılımla bir araya getirir.</p>
@@ -177,5 +179,6 @@
 
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/netmera-events.js"></script>
 </body>
 </html>
