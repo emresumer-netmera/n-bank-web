@@ -5,15 +5,13 @@
      https://user.netmera.com/netmera-developer-guide/platforms/web/user-and-attributes
 
    IMPORTANT — codes below fall into two groups:
-   1) CONFIRMED standard codes (present in Netmera's own Standard Events
-      reference and/or the official Web SDK docs): n:cl, n:pgv, n:vp.
-   2) UNCONFIRMED placeholders, clearly marked "TODO": Register is a genuine
-      Netmera pre-defined event (same family as Login) but its short code is
-      not published anywhere public — same for the custom "Credit Card
-      Application" event, whose code is only generated once you create it in
-      Netmera Panel > Developers > Events > Create New Event. Replace the two
-      TODO placeholders below with the real codes from your panel before
-      relying on this data in reports.
+   1) CONFIRMED codes: n:cl, n:pgv, n:vp, n:rg (all present in Netmera's own
+      Standard Events reference table / official Web SDK docs).
+   2) UNCONFIRMED placeholder, clearly marked "TODO": the custom "Credit
+      Card Application" event, whose code is only generated once you
+      create it in Netmera Panel > Developers > Events > Create New Event.
+      Replace the TODO placeholder below with the real code from your
+      panel before relying on this data in reports.
    ========================================================================== */
 (function () {
   "use strict";
@@ -25,7 +23,7 @@
     LOGIN: "n:cl",          // CONFIRMED — Login
     PAGE_VIEW: "n:pgv",     // CONFIRMED — Page View
     VIEW_PRODUCT: "n:vp",   // CONFIRMED — View Product
-    REGISTER: "n:re"        // TODO: confirm in Netmera Panel > Developers > Events (Standard Events > Register)
+    REGISTER: "n:rg"        // CONFIRMED — Register (Standard Events table)
   };
   var CUSTOM_EVENT_CREDIT_CARD_APPLICATION = "c:credit_card_application"; // TODO: replace with the code generated after creating this custom event in Netmera Panel
 
