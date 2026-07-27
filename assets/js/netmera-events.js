@@ -4,18 +4,12 @@
      https://user.netmera.com/netmera-developer-guide/platforms/web/events
      https://user.netmera.com/netmera-developer-guide/platforms/web/user-and-attributes
 
-   IMPORTANT — codes below fall into two groups:
-   1) CONFIRMED codes: n:cl, n:pgv, n:vp, n:rg (all present in Netmera's own
-      Standard Events reference table / official Web SDK docs), plus their
-      per-attribute codes pulled directly from the Netmera Panel event
-      definitions (Developers > Events > <event> > Attributes):
-        Page View (n:pgv): pageURL -> "ee"
-        View Product (n:vp): itemName -> "eb", utmSource -> "fl"
-   2) UNCONFIRMED placeholder, clearly marked "TODO": the custom "Credit
-      Card Application" event, whose code is only generated once you
-      create it in Netmera Panel > Developers > Events > Create New Event.
-      Replace the TODO placeholder below with the real code from your
-      panel before relying on this data in reports.
+   IMPORTANT — every code below is now CONFIRMED directly from the Netmera
+   Panel (Developers > Events > <event> > Attributes):
+     Login (n:cl), Page View (n:pgv), View Product (n:vp), Register (n:rg)
+     Page View: pageURL -> "ee"
+     View Product: itemName -> "eb", utmSource -> "fl"
+     Credit Card Application (custom, code "dgvky"): cardName -> "ea"
    ========================================================================== */
 (function () {
   "use strict";
@@ -24,12 +18,20 @@
   var netmera = window.netmera;
 
   var EVENT_CODE = {
-    LOGIN: "n:cl",          // CONFIRMED — Login
-    PAGE_VIEW: "n:pgv",     // CONFIRMED — Page View
-    VIEW_PRODUCT: "n:vp",   // CONFIRMED — View Product
-    REGISTER: "n:rg"        // CONFIRMED — Register (Standard Events table)
+    LOGIN: "n:cl",              // CONFIRMED — Login
+    PAGE_VIEW: "n:pgv",         // CONFIRMED — Page View
+    VIEW_PRODUCT: "n:vp",       // CONFIRMED — View Product
+    REGISTER: "n:rg",           // CONFIRMED — Register (Standard Events table)
+    CREDIT_CARD_APPLICATION: "dgvky" // CONFIRMED — custom event created in Netmera Panel
   };
-  var CUSTOM_EVENT_CREDIT_CARD_APPLICATION = "c:credit_card_application"; // TODO: replace with the code generated after creating this custom event in Netmera Panel
+
+  // select.value -> canonical card name sent as the "cardName" (ea) attribute,
+  // kept stable regardless of the site's current display language (TR/EN).
+  var CARD_NAMES = {
+    classic: "N Bank Classic",
+    gold: "N Bank Gold",
+    genc: "N Bank Genç"
+  };
 
   /* ---- low-level helpers -------------------------------------------------- */
   function sendEvent(payload) {
@@ -184,9 +186,10 @@
     if (cardApplyForm) {
       cardApplyForm.addEventListener("submit", function () {
         var select = document.getElementById("kart-secimi");
+        var cardValue = select ? select.value : "";
         sendEvent({
-          code: CUSTOM_EVENT_CREDIT_CARD_APPLICATION,
-          cardType: select ? select.value : ""
+          code: EVENT_CODE.CREDIT_CARD_APPLICATION,
+          ea: CARD_NAMES[cardValue] || cardValue
         });
       });
     }
