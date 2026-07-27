@@ -6,7 +6,11 @@
 
    IMPORTANT — codes below fall into two groups:
    1) CONFIRMED codes: n:cl, n:pgv, n:vp, n:rg (all present in Netmera's own
-      Standard Events reference table / official Web SDK docs).
+      Standard Events reference table / official Web SDK docs), plus their
+      per-attribute codes pulled directly from the Netmera Panel event
+      definitions (Developers > Events > <event> > Attributes):
+        Page View (n:pgv): pageURL -> "ee"
+        View Product (n:vp): itemName -> "eb", utmSource -> "fl"
    2) UNCONFIRMED placeholder, clearly marked "TODO": the custom "Credit
       Card Application" event, whose code is only generated once you
       create it in Netmera Panel > Developers > Events > Create New Event.
@@ -32,6 +36,10 @@
     netmera.push(function (api) {
       api.sendEvent(payload);
     });
+  }
+
+  function getUtmSource() {
+    return new URLSearchParams(window.location.search).get("utm_source") || undefined;
   }
 
   // "identifyUser": links the app's own user id (extid) to the Netmera profile
@@ -98,7 +106,7 @@
     /* ---- Page View: fires once per page load, every page -------------------- */
     sendEvent({
       code: EVENT_CODE.PAGE_VIEW,
-      url: window.location.pathname.split("/").pop() || "index.html"
+      ee: window.location.href // pageURL attribute
     });
 
     /* ---- Register: signup.html form ------------------------------------------ */
@@ -138,8 +146,8 @@
       var titleEl = el.querySelector("h3");
       sendEvent({
         code: EVENT_CODE.VIEW_PRODUCT,
-        productId: el.getAttribute("data-product-card"),
-        productName: titleEl ? titleEl.textContent : ""
+        eb: titleEl ? titleEl.textContent : "", // itemName
+        fl: getUtmSource()
       });
     });
 
@@ -148,8 +156,8 @@
       var titleEl = el.querySelector("h3");
       sendEvent({
         code: EVENT_CODE.VIEW_PRODUCT,
-        productId: el.getAttribute("data-product-fund"),
-        productName: titleEl ? titleEl.textContent : ""
+        eb: titleEl ? titleEl.textContent : "", // itemName
+        fl: getUtmSource()
       });
     });
 
@@ -160,8 +168,8 @@
       var fireLoanProductView = function (btn) {
         sendEvent({
           code: EVENT_CODE.VIEW_PRODUCT,
-          productId: btn.getAttribute("data-loan-type"),
-          productName: btn.textContent
+          eb: btn.textContent, // itemName
+          fl: getUtmSource()
         });
       };
       loanButtons.forEach(function (btn) {
