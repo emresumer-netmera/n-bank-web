@@ -72,20 +72,12 @@
   function setAuthExtId(extid) { localStorage.setItem(AUTH_KEY, extid); }
   function clearAuth() { localStorage.removeItem(AUTH_KEY); }
 
+  // The guest/authed class is also set synchronously in <head> (see the
+  // inline script at the top of every page) so the correct buttons paint on
+  // the very first frame — this call just keeps it in sync after a runtime
+  // login/logout, it is not what prevents the flash on page load.
   function applyAuthUI() {
-    var authed = !!getAuthExtId();
-    document.querySelectorAll("[data-login-btn]").forEach(function (el) {
-      el.style.display = authed ? "none" : "";
-    });
-    document.querySelectorAll("[data-signup-btn]").forEach(function (el) {
-      el.style.display = authed ? "none" : "";
-    });
-    document.querySelectorAll("[data-logout-btn]").forEach(function (el) {
-      el.style.display = authed ? "" : "none";
-    });
-    document.querySelectorAll("[data-profile-link]").forEach(function (el) {
-      el.style.display = authed ? "" : "none";
-    });
+    document.documentElement.classList.toggle("nb-authed", !!getAuthExtId());
   }
 
   document.addEventListener("DOMContentLoaded", function () {

@@ -2,6 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{if(localStorage.getItem("nb-auth-extid")){document.documentElement.classList.add("nb-authed");}}catch(e){}})();</script>
 <script>var netmera = netmera || []</script>
 <script src="https://cdn.netmera-web.com/wsdkjs/NMS.Arf0hz_GTVg2I__ePbj94Er4bk5zy2dkr9dDCc062OvJK9cNdZxlSFlTQwM7rTzOtWLWXREY1toMHK8B" async></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,12 +20,12 @@
       <a href="index.html" data-i18n="nav.home">Anasayfa</a>
       <a href="kredi-hesaplama.html" data-i18n="nav.loans">Krediler</a>
       <a href="kredi-karti-basvuru.html" data-i18n="nav.cards">Kredi Kartları</a>
-      <a href="profile.html" data-profile-link style="display:none;" data-i18n="nav.profile">Profilim</a>
+      <a href="profile.html" data-profile-link data-i18n="nav.profile">Profilim</a>
     </nav>
     <div class="header-actions">
       <a href="login.html" class="btn btn-outline" data-login-btn><span class="long" data-i18n="header.loginLong">Giriş Yap</span><span class="short" data-i18n="header.loginShort">Giriş</span></a>
       <a href="signup.html" class="btn btn-primary" data-signup-btn><span data-i18n="header.signup">Hesap Aç</span></a>
-      <a href="#" class="btn btn-outline" data-logout-btn style="display:none;"><span data-i18n="header.logout">Çıkış Yap</span></a>
+      <a href="#" class="btn btn-outline" data-logout-btn><span data-i18n="header.logout">Çıkış Yap</span></a>
       <div class="lang-switch" data-lang-switch>
         <button type="button" class="active" data-lang="tr">TR</button>
         <button type="button" data-lang="en">EN</button>

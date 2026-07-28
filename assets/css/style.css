@@ -124,6 +124,16 @@ h1, h2, h3, h4 { margin: 0 0 12px; line-height: 1.25; }
 .header-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-left: auto; }
 .header-actions .btn { white-space: nowrap; }
 .header-actions .short { display: none; }
+
+/* Auth state (guest vs signed-in) — driven purely by the "nb-authed" class on
+   <html>, set synchronously in <head> before first paint (see the inline
+   script at the top of every page) to avoid a flash of the wrong buttons. */
+[data-logout-btn],
+[data-profile-link] { display: none; }
+html.nb-authed [data-login-btn],
+html.nb-authed [data-signup-btn] { display: none; }
+html.nb-authed [data-logout-btn] { display: inline-flex; }
+html.nb-authed [data-profile-link] { display: inline; }
 .nav-toggle {
   display: none;
   background: none;
